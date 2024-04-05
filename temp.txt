@@ -1,0 +1,12 @@
+document.querySelectorAll(".likepost").forEach(elem => elem.addEventListener("click", () => {
+                if (document.querySelector('.like-status').classList.contains("fa-regular")) {
+                    document.querySelector('.like-status').classList.remove("fa-regular");
+                    document.querySelector('.like-status').classList.add("fa-solid");
+                    document.querySelector('.like-status').style.color = "red";
+                }
+                else {
+                    document.querySelector('.like-status').classList.add("fa-regular");
+                    document.querySelector('.like-status').classList.remove("fa-solid");
+                    document.querySelector('.like-status').style.color = "var(--text-color)";
+                }
+            }));

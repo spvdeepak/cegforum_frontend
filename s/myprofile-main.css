@@ -1,0 +1,232 @@
+.user-profile-display {
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+.myptitle {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+}
+
+.main-profile {
+    margin: 15px 30px 50px 30px;
+    display: flex;
+}
+
+.user-profile-e-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-top: -30px;
+}
+
+.user-profile-e-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+}
+
+.user-profile-e-img button {
+    margin-top: 20px;
+    padding: 8px;
+    width: 50px;
+    margin-left: -5px;
+    font-size: 17px;
+    color: #000;
+    cursor: pointer;
+    border: none;
+}
+
+/* Main-post-section */
+.post-c-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.image-post {
+    background-color: var(--post-grey);
+}
+
+.image-post img {
+    display: block;
+    margin: 0 auto;
+    max-height: 400px;
+}
+
+.image-description {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: var(--text-color);
+}
+
+.id-title {
+    display: block;
+    font-weight: 600;
+    margin: 10px;
+    color: var(--text-color);
+}
+
+.id-description {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+/* User-Action-content */
+
+.action-menu-post ul {
+    display: flex;
+    border-top: 1px solid var(--post-grey);
+    color: var(--text-color);
+}
+
+.action-menu-post ul li {
+    padding: 10px 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.amp-li-right {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    order: 2;
+    color: red;
+    font-size: 13px !important;
+}
+
+.like-count {
+    font-size: 15px;
+    margin: auto;
+    margin-left: 10px;
+}
+
+/* User-Action-content */
+
+.fol-count {
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: #1371b0;
+}
+
+
+/* Comment-Box */
+
+.comment-div {
+    height: 80vh;
+    width: 30vw;
+    background: var(--bodybg);
+    position: fixed;
+    border: 3px solid var(--text-color);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    display: none;
+}
+.cmt-title {
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    background-color: var(--bodybg);
+    position: sticky;
+    top: 0;
+}
+.cmts {
+    color: var(--text-color);
+    margin: 10px 0 10px 30px;
+}
+.cmt1 {
+    background: var(--white-m-hover);
+    width: 70%;
+    padding: 8px 8px 8px 15px;
+    margin: 10px;
+}
+.my-cmt-box {
+    position: sticky;
+    bottom: 0;
+}
+.my-cmt-box input{
+    width: 100%;
+    padding: 10px 10px 10px 15px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.cmtclose {
+    color: var(--primary-color);
+    float: right;
+    padding-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main-post-div-blur {
+    filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Follow popup */
+.follow-div {
+    height: 80vh;
+    width: 30vw;
+    background: var(--bodybg);
+    position: fixed;
+    border: 3px solid var(--text-color);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    display: none;
+}
+.foll-title {
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    background-color: var(--bodybg);
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+.follow-bar1, .follow-bar2 {
+    margin: 0 45px;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.fbar-active {
+    border-bottom: 4px solid #3ab0ff;
+}
+.follclose {
+    color: var(--primary-color);
+    margin-left: auto;
+    padding-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.folls1, .folls2 {
+    color: var(--text-color);
+}
+.foll1 {
+    border-bottom: 1px solid grey;
+    padding: 10px 0 10px 30px;
+}
+.foll1c {
+    font-size: 12px;
+}
+.fol-count {
+    border: none;
+}

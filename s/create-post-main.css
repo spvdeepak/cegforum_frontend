@@ -1,0 +1,106 @@
+.myptitle {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+}
+.create-post-btn {
+    padding: 12px;
+    background: #3ab0ff;
+    color: #000;
+    border: 2px solid transparent;
+    width: 180px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+}
+
+.create-post-btn:hover {
+    border: 2px solid var(--text-color);
+    transition: 0.4s ease all;
+}
+
+.create-post-main {
+    border: 3px solid var(--text-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    position: absolute;
+    width: 50%;
+    height: max-content;
+    margin: 20px auto;
+    background: var(--bodybg);
+}
+
+.create-post-main form {
+    margin: 10px 20px 10px 20px;
+    display: flex;
+}
+
+label[for=user-post] {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    background: #3ab0ff;
+    color: #fff;
+    color: #000;
+    display: block;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+label[for=user-post]:hover {
+    border: 2px solid var(--text-color);
+    transition: 0.4s ease all;
+}
+
+.display-img {
+    height: 200px;
+    width: 200px;
+    background: grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.caption-post {
+    margin-left: auto;
+}
+
+.caption-post textarea {
+    width: 430px;
+    height: 170px;
+    resize: none;
+    background: transparent;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    caret-color: var(--text-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.caption-post textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.caption-post button {
+    padding: 10px;
+    background: #10d247;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    width: 120px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.caption-post button:hover {
+    border: 2px solid var(--text-color);
+    transition: 0.4s ease all;
+}

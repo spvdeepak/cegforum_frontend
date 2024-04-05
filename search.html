@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="s/theme-script.js" defer></script>
+    <link rel="stylesheet" href="s/theme-main.css" type="text/css">
+    <title>Search Results | CEG Forum</title>
+    <style>
+        .search-result-text {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 22px;
+        }
+
+        .result-cards {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .result-cards .card {
+            width: max-content;
+            margin: 25px;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            padding: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .result-cards .card:hover {
+            border: 2px solid var(--primary-color);
+            transition: 0.4s ease;
+        }
+
+        .result-cards .card .image {
+            border-radius: 50px;
+            width: 70px;
+            height: 70px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .result-cards .card .image img {
+            border-radius: 50px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .result-cards .card .s-status {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .result-cards .card .s-name {
+            text-align: center;
+            font-size: 18px;
+            display: block;
+            margin-bottom: -17px;
+        }
+
+        .result-cards .card button {
+            padding: 9px 25px;
+            background-color: #00aeff;
+            color: #fff;
+            font-weight: 600;
+            font-size: 17px;
+            font-family: 'Poppins', sans-serif;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .result-cards .card button:hover {
+            color: #000;
+            transition: 0.5s ease;
+            border: 2px solid var(--text-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contents">
+        <div class="header">
+            <div class="logo-header"><img src="i/m/ialogo.svg" alt="Logo"></div>
+            <div class="nav-top">
+                <ul class="ul-top">
+                    <li class="li-top active-li-top" title="Home"><a href="#"><i class='bx bxs-home-circle'></i></a>
+                    </li>
+                    <li class="li-top" title="Write Answers"><a href="#"><i class='bx bxs-edit-alt'></i></a></li>
+                    <li class="li-top" title="Notifications"><a href="#"><i class='bx bxs-bell'></i></a></li>
+                    <div class="search-div">
+                        <i class='bx bx-search'></i>
+                        <input type="text" class="search-home"
+                            placeholder="Search Forum, Aluminis and all answers you need!">
+                    </div>
+                </ul>
+            </div>
+            <div class="user-b-info">
+                <div class="uname-top-1">Hi, <span id="fname-top">Deepak</span>!</div>
+                <div class="user-p-img-container">
+                    <img class="user-p-img" src="i/user-1.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="user-top-menu">
+            <ul class="user-tm-ul">
+                <a>
+                    <li><button><i class='bx bx-user'></i> My Profile</button></li>
+                </a>
+                <a>
+                    <li><button><i class='bx bx-bell'></i> Notifications</button></li>
+                </a>
+                <a>
+                    <li><button><i class="fa-light fa-book"></i> E-Books</button></li>
+                </a>
+                <a>
+                    <li class="dark-switch tli"><i class='bx bx-moon'></i> Dark Mode - <span style="color: tomato;"
+                            class="dark-status">Off</span></li>
+                </a>
+                <a>
+                    <li class="eve-banner-hide tli"><i class="fa-regular fa-eye-slash eve-eye-i"></i> <span
+                            class="eve-banner-hide-txt">Hide Event Banner</span></li>
+                </a>
+                <a href="https://pages.razorpay.com/cf-donate" target="_blank">
+                    <li class="tli"><i class="fa-light fa-circle-dollar-to-slot"></i> Donate</li>
+                </a>
+                <a>
+                    <li style="color: tomato;"><button><i class='bx bx-log-out'></i> Logout</button></li>
+                </a>
+            </ul>
+        </div>
+
+
+        <div class="main-post-div">
+            <div class="adv-div1">
+
+                <b style="color: #00aeff;">Pinnacle'22 - events</b><br>
+                <p style="font-weight: 600;">Water Rockertry Game</p>
+                An Pinnacle'22 Event!<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 11:00 am<br>
+                <b>Venue:</b> Main Gallery<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">K! Talks</b><br>
+                <p style="font-weight: 600;">Dr. P. Shankar on K! Talks</p>
+                Kurukshetra Talks<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 10:30 am<br>
+                <b>Venue:</b> Vivekananda Auditorium<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">Movie Screening</b><br>
+                <p style="font-weight: 600;">Kalakrithi AC tech event movie Screening in going to be happened Tonight.
+                </p>
+                Sponsored by edvoy<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 7:00 pm<br>
+                <b>Venue:</b> Main Gallery<br>
+                <b>Movie:</b> KGF Chapter 2<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">Abacus'22 - Inaugartion</b><br>
+                <p style="font-weight: 600;">Abacus Inauguration Ceremony</p>
+                Sponsored by Samsung<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 4:00 pm<br>
+                <b>Venue:</b> Turing Hall - CSE Dept.<br><br>
+                <hr><br>
+
+            </div>
+
+            <div class="post-section">
+                <div class="search-result-text">Results for 'Search'</div>
+                <div class="result-cards">
+                    <div class="card">
+                        <div class="image"><img src="i/user-1.png" alt="Profile-Image"></div><br>
+                        <em class="s-name">Deepak Kumar <span class="verified-batch" title="Verified CEGian"
+                                style="color: #3AB0FF;"><i class="fa-solid fa-badge-check"></i></em><br>
+                        <p class="s-status">CSE 2nd Semester</p>
+                        <p class="s-status">2025 Batch</p><br>
+                        <button class="s-follow">Following</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="image"><img src="i/user-1.png" alt="Profile-Image"></div><br>
+                        <em class="s-name">Deepak Raj</em><br>
+                        <p class="s-status">CSE 6th Semester</p>
+                        <p class="s-status">2027 Batch</p><br>
+                        <button class="s-follow">Follow</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="image"><img src="i/user-1.png" alt="Profile-Image"></div><br>
+                        <em class="s-name">Deepak <span class="verified-batch" title="Verified CEG Alumini"
+                                style="color: tomato;"><i class="fa-solid fa-badge-check"></i></em><br>
+                        <p class="s-status">CSE 2nd Semester</p>
+                        <p class="s-status">2025 Batch</p><br>
+                        <button class="s-follow">Follow</button>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="adv-div2">
+
+                <b style="color: #00aeff;">Movie Screening</b><br>
+                <p style="font-weight: 600;">Kalakrithi AC tech event movie Screening in going to be happened Tonight.
+                </p>
+                Sponsored by edvoy<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 7:00 pm<br>
+                <b>Venue:</b> Main Gallery<br>
+                <b>Movie:</b> KGF Chapter 2<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">Abacus'22 - Inaugartion</b><br>
+                <p style="font-weight: 600;">Abacus Inauguration Ceremony</p>
+                Sponsored by Samsung<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 4:00 pm<br>
+                <b>Venue:</b> Turing Hall - CSE Dept.<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">Pinnacle'22 - events</b><br>
+                <p style="font-weight: 600;">Water Rockertry Game</p>
+                An Pinnacle'22 Event!<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 11:00 am<br>
+                <b>Venue:</b> Main Gallery<br><br>
+                <hr><br>
+                <b style="color: #00aeff;">K! Talks</b><br>
+                <p style="font-weight: 600;">Dr. P. Shankar on K! Talks</p>
+                Kurukshetra Talks<br>
+                <b>Date:</b> 15-06-2022<br>
+                <b>Time:</b> 10:30 am<br>
+                <b>Venue:</b> Vivekananda Auditorium<br><br>
+                <hr><br>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

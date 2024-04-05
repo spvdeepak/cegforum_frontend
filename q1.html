@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Question-1 Javascript</title>
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+			user-select: none;
+		}
+
+		button {
+			padding: 10px;
+			background: #628cfc;
+			border: 1px solid transparent;
+			color: #000;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		#result {
+			background: #78eb96;
+			width: 500px;
+			padding: 10px;
+			margin-right: 80px;
+			float: right;
+		}
+
+		input {
+			padding: 15px;
+			border: 1px solid #000;
+			font-size: 18px;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		.header {
+			height: 60px;
+			font-weight: 500;
+			font-size: 40px;
+			text-align: center;
+			background: pink;
+			position: sticky;
+			top: 0;
+		}
+
+		div {
+			padding-left: 40px;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			margin-bottom: 20px;
+		}
+
+		select {
+			padding: 15px;
+			font-size: 18px;
+		}
+
+		option {
+			border-radius: 0;
+			font-size: 18px;
+		}
+
+		#selectq {
+			margin-top: 40px;
+		}
+
+		#q1,
+		#q2,
+		#q3,
+		#q4,
+		#q5,
+		#sq1 {
+			display: none;
+			border: 1px solid #628cfc;
+			width: 400px;
+			margin-left: 100px;
+			margin-top: 50px;
+		}
+
+		#rslttxt {
+			float: right;
+			margin-right: 500px;
+		}
+	</style>
+	<script>
+		function q1open() {
+			document.getElementById("q1").style.display = "block";
+			document.getElementById("q2").style.display = "none";
+			document.getElementById("q3").style.display = "none";
+			document.getElementById("q4").style.display = "none";
+			document.getElementById("q5").style.display = "none";
+			document.getElementById("sq1").style.display = "none";
+		}
+		function q2open() {
+			document.getElementById("q1").style.display = "none";
+			document.getElementById("q2").style.display = "block";
+			document.getElementById("q3").style.display = "none";
+			document.getElementById("q4").style.display = "none";
+			document.getElementById("q5").style.display = "none";
+			document.getElementById("sq1").style.display = "none";
+		}
+		function q3open() {
+			document.getElementById("q1").style.display = "none";
+			document.getElementById("q2").style.display = "none";
+			document.getElementById("q3").style.display = "block";
+			document.getElementById("q4").style.display = "none";
+			document.getElementById("q5").style.display = "none";
+			document.getElementById("sq1").style.display = "none";
+		}
+		function q4open() {
+			document.getElementById("q1").style.display = "none";
+			document.getElementById("q2").style.display = "none";
+			document.getElementById("q3").style.display = "none";
+			document.getElementById("q4").style.display = "block";
+			document.getElementById("q5").style.display = "none";
+			document.getElementById("sq1").style.display = "none";
+		}
+		function q5open() {
+			document.getElementById("q1").style.display = "none";
+			document.getElementById("q2").style.display = "none";
+			document.getElementById("q3").style.display = "none";
+			document.getElementById("q4").style.display = "none";
+			document.getElementById("q5").style.display = "block";
+			document.getElementById("sq1").style.display = "none";
+		}
+		function sq1open() {
+			document.getElementById("q1").style.display = "none";
+			document.getElementById("q2").style.display = "none";
+			document.getElementById("q3").style.display = "none";
+			document.getElementById("q4").style.display = "none";
+			document.getElementById("q5").style.display = "none";
+			document.getElementById("sq1").style.display = "block";
+		}
+	</script>
+</head>
+
+<body>
+
+	<p class="header">Week 3 - Javascript</p>
+
+
+	<div id="selectq">
+		<button onclick="q1open()">Question 1</button>
+		<button onclick="q2open()">Question 2</button>
+		<button onclick="q3open()">Question 3</button>
+		<button onclick="q4open()">Question 4</button>
+		<button onclick="q5open()">Question 5</button>
+		<button onclick="sq1open()">Spot Question</button>
+		<h3 id="rslttxt">Result:- </h3><br>
+		<button id="result">Perform an action to display Result</button>
+	</div>
+
+
+	<div id="q1">
+		<h2>Question 1</h2>
+
+		<input type="number" id="number1" placeholder="Number 1" required><br><br>
+		<input type="number" id="number2" placeholder="Number 1" required><br><br>
+		<button onclick="mevent()">Multiply</button>
+		<button onclick="devent()">Divide</button><br><br>
+		<script>
+			function mevent() {
+				num1 = document.getElementById("number1").value;
+				num2 = document.getElementById("number2").value;
+				document.getElementById("result").innerHTML = "Result: " + num1 * num2;
+			}
+
+			function devent() {
+				num1 = document.getElementById("number1").value;
+				num2 = document.getElementById("number2").value;
+				document.getElementById("result").innerHTML = "Result: " + num1 / num2;
+			}
+		</script>
+	</div>
+
+
+	<div id="q2">
+		<h2 class="q2">Question 2</h2><br>
+		<button onclick="urlfun()">Click here to get URL</button><br><br>
+		<script>
+			function urlfun() {
+				alert("The URL of this page is: " + window.location.href);
+				document.getElementById("result").innerHTML = "URL: " + window.location.href;
+			}
+		</script>
+	</div>
+	<div id="q3">
+		<h2 class="q3">Question 3</h2>
+		<input type="number" id="number3" placeholder="Number 1" required><br><br>
+		<input type="number" id="number4" placeholder="Number 2" required><br><br>
+		<input type="number" id="number5" placeholder="Number 3" required><br><br>
+		<button onclick="intfun()">Find the largest</button><br><br>
+		<script>
+			function intfun() {
+				num3 = document.getElementById("number3").value;
+				num4 = document.getElementById("number4").value;
+				num5 = document.getElementById("number5").value;
+				let largest;
+				if (num3 >= num4 && num3 >= num5) {
+					largest = num3;
+				}
+				else if (num4 >= num3 && num4 >= num5) {
+					largest = num4;
+				}
+				else {
+					largest = num5;
+				}
+				document.getElementById("result").innerHTML = "Largest Integer is: " + largest;
+			}
+		</script>
+	</div>
+
+
+	<div id="q4">
+		<h2 class="q4">Question 4</h2>
+		<input type="number" placeholder="Enter the seconds" id="timevalue" required><br><br>
+		<button onclick="caltime()">Calculate Time</button><br><br>
+		<script>
+			function caltime() {
+				insec = document.getElementById("timevalue").value;
+				inmin = insec / 60;
+				inhour = insec / 3600;
+
+				document.getElementById("result").innerHTML = inhour + " hour(s) and " + inmin + " minute(s)";
+			}
+		</script>
+	</div>
+
+
+	<div id="q5">
+		<h2>Question 5</h2>
+		<select id="select">
+			<option value="">Select Exam Type</option>
+			<option value="final">Final-Exam</option>
+			<option value="other">Others</option>
+		</select><br><br>
+		<input type="number" id="mark" placeholder="Marks"><br><br>
+		<button onclick="gradefun()">Check weather A+</button><br><br>
+		<script>
+			function gradefun() {
+				etype = document.getElementById("select").value;
+				mark = document.getElementById("mark").value;
+				if (mark >= 90 && etype == "final") {
+					document.getElementById("result").innerHTML = "True";
+				}
+				else if (mark >= 89.100 && etype == "other") {
+					document.getElementById("result").innerHTML = "True";
+				}
+				else {
+					document.getElementById("result").innerHTML = "False"
+				}
+			}
+		</script>
+	</div>
+
+	<div id="sq1">
+		<h2>Spot Question</h2><br>
+		<form id="form">
+			<input type="name" placeholder="Username*" id="uname" onkeyup="validname()"><br>
+			<span id="name-error" class="errormsg"></span><br><br>
+
+			<input type="email" placeholder="Email*" id="umail" onkeyup="validmail()"><br>
+			<span id="mail-error" class="errormsg"></span><br><br>
+
+			<input type="number" placeholder="Contact Number*" id="unumber" onkeyup="validphone()"><br>
+			<span id="number-error" class="errormsg"></span><br><br>
+
+			<span>BATCH:* </span>
+			<input type="radio" name="batch" value="N"> N
+			<input type="radio" name="batch" value="P"> P
+			<input type="radio" name="batch" value="Q"> Q<br>
+			<span id="radio-error" class="errormsg"></span><br><br>
+
+			GENDER:* <select id="ugender" onkeyup="validgender()">
+				<option value="">-Select-</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select><br>
+			<span id="gender-error" class="errormsg"></span><br><br>
+
+			<input type="password" placeholder="Create Password*" id="upass" onkeyup="validpass()"
+				onfocus="passreqfun()" onfocusout="passreqfunout()">
+			<span id="showhide" onclick="showpass()"> Show</span><br>
+			<span id="pass-error" class="errormsg"></span><br><br>
+
+			<button type="submit" style="padding: 10px 70px;" onclick="return validform()">Submit</button>
+			<button style="background: tomato;" type="reset">Reset</button><br>
+			<span id="submit-error" class="errormsg"></span>
+			<br><br>
+
+			<div id="pass-req">
+				<p>Password Requirements:</p><br>
+				<span id="digit">1) 8 digits</span><br>
+				<span id="upper">2) a Uppercase letter</span><br>
+				<span id="lower">3) a Lowercase letter</span><br>
+				<span id="num">4) a Number</span><br>
+				<span id="spchar">5) a Special character</span><br>
+			</div>
+		</form>
+		<style>
+			input[type="radio"] {
+				margin-left: 10px;
+			}
+
+			.errormsg {
+				color: red;
+			}
+
+			#showhide {
+				color: #628cfc;
+				cursor: pointer;
+			}
+
+			input:focus {
+				border: 2px solid #628cfc;
+			}
+
+			#pass-req {
+				position: absolute;
+				margin-top: -265px;
+				margin-left: 330px;
+				background: skyblue;
+				padding: 15px;
+				border-radius: 15px;
+				display: none;
+			}
+
+			#pass-req:before {
+				content: "";
+				position: absolute;
+				width: 0px;
+				height: 0px;
+				border: 10px solid;
+				border-color: transparent #628cfc transparent transparent;
+				left: -20px;
+				top: 80px;
+			}
+
+			#pass-req span {
+				color: red;
+			}
+		</style>
+		<script>
+
+			// Validation
+
+			var nameerror = document.getElementById("name-error");
+			var mailerror = document.getElementById("mail-error");
+			var numerror = document.getElementById("number-error");
+			var radioerror = document.getElementById("radio-error");
+			var gendererror = document.getElementById("gender-error");
+			var passerror = document.getElementById("pass-error");
+			var submiterror = document.getElementById("submit-error");
+
+			// Name
+			function validname() {
+				uname = document.getElementById("uname").value;
+				if (uname.length == 0) {
+					nameerror.innerHTML = "<i class='bx bxs-error'></i>" + " Username is Required";
+					return false;
+				}
+				nameerror.innerHTML = "";
+				return true;
+			}
+			// Name
+
+			// Phone
+
+			function validphone() {
+				unumber = document.getElementById("unumber").value;
+				if (unumber.length == 0) {
+					numerror.innerHTML = "<i class='bx bxs-error'></i>" + " Phone Number is Required";
+					return false;
+				}
+				if (unumber.length !== 10) {
+					numerror.innerHTML = "<i class='bx bxs-error'></i>" + " Phone Number must contain 10 digits";
+					return false;
+				}
+				numerror.innerHTML = "";
+				return true;
+			}
+
+			// Phone
+
+			// Mail
+
+			function validmail() {
+				umail = document.getElementById("umail").value;
+				if (umail.length == 0) {
+					mailerror.innerHTML = "<i class='bx bxs-error'></i>" + " Email is Required";
+					return false;
+				}
+				if (!umail.match(/^[A-Za-z\._\[0-9]*[@][A-Za-z\-[0-9]*[\.][a-z]{2,4}$/)) {
+					mailerror.innerHTML = "<i class='bx bxs-error'></i>" + " Invalid Email";
+					return false;
+				}
+
+				mailerror.innerHTML = "";
+				return true;
+			}
+
+			// Mail 
+
+			// Dropdown
+
+			function validgender() {
+				ugender = document.getElementById("ugender").value;
+				if (ugender == "") {
+					gendererror.innerHTML = "<i class='bx bxs-error'></i>" + " Select gender";
+					return false;
+				}
+				gendererror.innerHTML = "";
+				return true;
+			}
+
+			// Dropdown
+
+
+			// Password 
+
+			function validpass() {
+				upass = document.getElementById("upass").value;
+
+				if (upass.length == 0) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password is required";
+					return false;
+				}
+
+				if (upass.length < 8) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password must meet its Requirements";
+					document.getElementById("digit").style.color = "red";
+					return false;
+				}
+				else {
+					passerror.innerHTML = "";
+					document.getElementById("digit").style.color = "green";
+				}
+
+				if (!upass.match(/[0-9]/)) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password must meet its Requirements";
+					document.getElementById("num").style.color = "red";
+					return false;
+				}
+				else {
+					passerror.innerHTML = "";
+					document.getElementById("num").style.color = "green";
+				}
+
+				if (!upass.match(/[A-Z]/)) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password must meet its Requirements";
+					document.getElementById("upper").style.color = "red";
+					return false;
+				}
+				else {
+					passerror.innerHTML = "";
+					document.getElementById("upper").style.color = "green";
+				}
+
+				if (!upass.match(/[!\@\#\$\%\^\&\*\(\)\-\_\=\+\>\<\?\.\,]/)) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password must meet its Requirements";
+					document.getElementById("spchar").style.color = "red";
+					return false;
+				}
+				else {
+					passerror.innerHTML = "";
+					document.getElementById("spchar").style.color = "green";
+				}
+
+				if (!upass.match(/[a-z]/)) {
+					passerror.innerHTML = "<i class='bx bxs-error'></i>" + " Password must meet its Requirements";
+					document.getElementById("lower").style.color = "red";
+					return false;
+				}
+				else {
+					passerror.innerHTML = "";
+					document.getElementById("lower").style.color = "green";
+					return true;
+				}
+			}
+
+			// Password 
+
+			// Submit Button 
+
+			function validform() {
+				if (!validname() || !validmail() || !validphone() || !validgender() || !validpass()) {
+					submiterror.innerHTML = "<i class='bx bxs-error'></i>" + " Please fill all required fields";
+					return false;
+				}
+
+					// radio
+
+					var valid = false;
+					var x = document.form.batch;
+					for(var i=0;i<x.length;){
+						if (x[i].checked) {
+							valid = true;
+							break;
+						}
+					}
+
+					if (valid) {
+						radioerror.innerHTML = "";
+					}
+					else {
+						radioerror.innerHTML = "<i class='bx bxs-error'></i>" + " Select Batch";
+					}
+			}
+
+			// Submit Button
+
+
+			// Validation
+
+			// General
+
+			function passreqfun() {
+				document.getElementById("pass-req").style.display = "block";
+			}
+			function passreqfunout() {
+				document.getElementById("pass-req").style.display = "none";
+			}
+
+			// General
+
+			// show password
+
+			function showpass() {
+				var passvalue = document.getElementById("upass");
+				if (passvalue.type === "password") {
+					passvalue.type = "text";
+					document.getElementById("showhide").innerHTML = "Hide";
+				}
+				else {
+					passvalue.type = "password";
+					document.getElementById("showhide").innerHTML = "Show";
+				}
+			}
+
+			// show password
+		</script>
+	</div>
+</body>
+
+</html>
